@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tz_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="15dp"
+            android:textColor="@color/news_name"/>
+        <TextView
+            android:id="@+id/tz_time"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/news_time"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/tz_image"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

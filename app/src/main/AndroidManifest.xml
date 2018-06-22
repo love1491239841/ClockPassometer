@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.clockpassometer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/des"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/des"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTop" >
+
+        </activity>
+        <activity android:name=".activity.HistoryActivity"
+            android:label="历史记录"/>
+        <activity android:name=".activity.SetPlanActivity"
+            android:label="我的设置"/>
+        <activity
+            android:name=".activity.WelComeActivity"
+            android:theme="@style/StartTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="SHUwbK2cDyUAiqwC3OKvFILp4CZB15Wg" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service
+            android:name=".step.service.StepService"
+            android:enabled="true"
+            android:exported="true"
+            android:priority="1000">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".pedometer.StepsDetectService"
+            android:priority="1000">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/register_name" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activity.NewsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.UserinfoActivity"
+            android:label="用户信息"/>
+        <activity
+            android:name=".activity.ForgetPasswordActivity"
+            android:label="@string/forget_password_name" />
+        <activity
+            android:name=".activity.CompleteActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.SignActivity"
+            android:label="签到"/>
+        <activity android:name=".activity.MyIntegralActivity"
+            android:label="我的积分"/>
+        <activity android:name=".activity.MyExchangeActivity"
+            android:label="兑换详情"/>
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.TaskActivity"
+            android:label="任务"/>
+        <activity android:name=".activity.RecordActivity"
+            android:label="记录"/>
+        <activity
+            android:name=".activity.GameActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.GameListActivity"
+            android:label="赛事中心"/>
+        <activity android:name=".activity.CommodityActivity"
+            android:label="商品详情"/>
+        <activity android:name=".activity.MyTaskActivity"
+            android:label="制定计划"/>
+        <activity android:name=".activity.ForRecordActivity"
+            android:label="兑换记录"/>
+        <activity android:name=".activity.SiteActivity"
+            android:label="收货地址"/>
+        <activity android:name=".activity.GainActivity"
+            android:label="积分获取"/>
+        <activity android:name=".activity.InformActivity"
+            android:label="通知"/>
+        <activity android:name=".activity.RankingActivity"
+            android:label="积分排名"/>
+        <activity android:name=".activity.SetSiteActivity"
+            android:label="添加地址"/>
+        <activity android:name=".activity.AccountActivity"
+            android:label="账号设置"/>
+        <activity
+            android:name=".activity.InquireActivity"
+            android:label="信息查询">
+        </activity>
+    </application>
+
+</manifest>

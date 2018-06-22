@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#248888</color>
+    <color name="colorPrimaryDark">#248888</color>
+    <color name="colorAccent">#DADDD8</color>
+    <color name="colorSchool_name">#248888</color>
+    <color name="red">#E8222D</color>
+    <color name="blue">#E8222D</color>
+
+    <color name="news_name">#000000</color>
+    <color name="news_time">#515151</color>
+    <color name="commodity_time">#000000</color>
+    <color name="commodity_button">#ffffff</color>
+    <color name="integral_text">#000000</color>
+    <color name="pedometer_text_color">#248888</color>
+    <color name="task_title_name">#248888</color>
+    <color name="task_text1_color">#ffffff</color>
+    <color name="task_text2_color">#ffffff</color>
+    <color name="game_item_text_name">#ffffff</color>
+    <!--MainActivity-->
+    <color name="main_fragmentBackground">#F5F7FA</color>
+    <color name="main_linearBackground">#F5F7FA</color>
+    <!--CommodityActivity-->
+    <color name="commodity_textColor">#ffffff</color>
+    <!--communityFragment-->
+    <color name="community_textColor">#000000</color>
+    <color name="community_titletextColor">#ffffff</color>
+    <color name="community_viewBackground">#F5F7FA</color>
+    <color name="community_titleBackground">#FFFFFF</color>
+    <!--SchoolFragment-->
+    <color name="School_textcolor">#000000</color>
+    <color name="user_viewBackground">#e6e6e6</color>
+    <!--muexchangeAtivity-->
+    <color name="myechange_itemtextColor">#000000</color>
+    <!--site_item-->
+    <color name="site_itemtextColor">#000000</color>
+</resources>
