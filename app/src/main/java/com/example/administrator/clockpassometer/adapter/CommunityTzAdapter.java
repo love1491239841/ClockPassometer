@@ -62,7 +62,7 @@ public class CommunityTzAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         ((NewsHolder) holder).tz_name.setText(news.getTitle());
         ((NewsHolder) holder).tz_time.setText(transferLongToDate(news.getAddTime()));
         Glide.with(context)
-                .load(Constants.Image_URL)
+                .load(Constants.Image_URL+"news.jpg")
                 .placeholder(R.mipmap.sb)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(((NewsHolder) holder).tz_image);

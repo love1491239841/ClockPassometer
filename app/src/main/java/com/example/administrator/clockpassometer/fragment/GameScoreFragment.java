@@ -54,10 +54,16 @@ public class GameScoreFragment extends Fragment {
     }
     private List<Score> initdata(){
         List<Score> scoreList = new ArrayList<>();
-        for (int i=0;i<15;i++){
-            Score score = new Score("王小明",i+"");
-            scoreList.add(score);
-        }
+        Score score1 = new Score("杨西西","98");
+        scoreList.add(score1);
+        Score score2 = new Score("陈志刚","63");
+        scoreList.add(score2);
+        Score score3 = new Score("于家岚","100");
+        scoreList.add(score3);
+        Score score4 = new Score("严静","34");
+        scoreList.add(score4);
+        Score score5 = new Score("杨坤","98");
+        scoreList.add(score5);
         return scoreList;
     }
     private void initData(){

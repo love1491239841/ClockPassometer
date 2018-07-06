@@ -1,30 +1,16 @@
 package com.example.administrator.clockpassometer.activity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 import com.example.administrator.clockpassometer.R;
-import com.example.administrator.clockpassometer.bean.Commodity;
 import com.example.administrator.clockpassometer.bean.News;
-import com.example.administrator.clockpassometer.bean.Task;
-import com.example.administrator.clockpassometer.utils.Constants;
-import com.example.administrator.clockpassometer.utils.JsonParse;
-import com.example.administrator.clockpassometer.utils.OkhttpUtils;
-
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import okhttp3.Call;
-import okhttp3.Response;
 
 public class NewsActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView news_name,news_time,news_content;

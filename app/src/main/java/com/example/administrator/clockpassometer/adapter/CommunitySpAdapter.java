@@ -66,8 +66,9 @@ public class CommunitySpAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         final Commodity news = CommodityList.get(position);
         ((NewsHolder) holder).sp_name.setText(news.getName());
         ((NewsHolder) holder).sp_price.setText(news.getIntegral()+"");
+        int x = position+1;
         Glide.with(context)
-                .load(Constants.Image_URL)
+                .load(Constants.Image_URL+x+".jpg")
                 .placeholder(R.mipmap.sb)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(((NewsHolder) holder).sp_image);
@@ -88,8 +89,5 @@ public class CommunitySpAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             CommodityList.addAll(CommodityDatas);
         }
         notifyDataSetChanged();
-    }
-    public void loadImage(String url,ImageView view) {
-        Glide.with(context).load(url).into(view);
     }
 }

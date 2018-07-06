@@ -50,7 +50,7 @@ public class CommodityActivity extends AppCompatActivity {
         commodity_integral.setText("积分："+commodity.getIntegral());
         commodity_inventory.setText("库存："+commodity.getStorage());
         Glide.with(CommodityActivity.this)
-                .load(Constants.Image_URL)
+                .load(Constants.Image_URL+commodity.getId()+".jpg")
                 .placeholder(R.mipmap.sb)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(commodity_image);
